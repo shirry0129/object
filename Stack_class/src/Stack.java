@@ -1,10 +1,16 @@
 
 public class Stack {
 	int volume;
-	private int data[];
-	static int stackSize=5;
+	int data[];
+	static int defaultSize=5;
 
+	//デフォルトコンストラクタ
 	Stack(){
+		data=new int[defaultSize];
+		System.out.println(data.length+"個分のスタック生成");
+	}
+
+	Stack(int stackSize){
 		data=new int[stackSize];
 		System.out.println(data.length+"個分のスタック生成");
 	}
