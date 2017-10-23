@@ -42,7 +42,7 @@ public class Stack {
 		return value;
 	}
 
-	//状態表示関数
+	//状態表示関数(全体)
 	void printStack()
 	{
 		System.out.print("|");
@@ -52,5 +52,11 @@ public class Stack {
 			System.out.print("|");
 		}
 		System.out.println("");
+	}
+
+	//状態表示関数(単体)
+	void printStack(int i) {
+		System.out.print('|');
+		System.out.println(data[i]+"|");
 	}
 }
