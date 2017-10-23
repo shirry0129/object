@@ -1,7 +1,13 @@
 
 public class Stack {
 	int volume;
-	int data[]=new int[5];
+	private int data[];
+	static int stackSize=5;
+
+	Stack(){
+		data=new int[stackSize];
+		System.out.println(data.length+"個分のスタック生成");
+	}
 
 	//データ追加関数
 	boolean push(int number)
