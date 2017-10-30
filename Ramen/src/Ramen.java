@@ -36,5 +36,6 @@ public class Ramen {
         System.out.print("量：" + ryou);
         System.out.print("固さ：" + katasa);
         System.out.println("スープ：" + soup);
+        System.out.print('\n');
     }
 }

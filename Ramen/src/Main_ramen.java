@@ -24,6 +24,14 @@ public class Main_ramen {
         ramen3.setMen(8);
         ramen3.setSoup(Taste.しお);
         ramen3.checkRamen();
+
+        System.out.println("==普通のチャーシュー麺");
+        ChashuMen chashuMen=new ChashuMen();
+        chashuMen.setMen(5);
+        chashuMen.setKatasa(2);
+        chashuMen.setChashu(5);
+        chashuMen.setSoup(Taste.みそ);
+        chashuMen.checkRamen();
 	}
 
 }
