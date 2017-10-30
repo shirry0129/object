@@ -1,25 +1,45 @@
 
 public class Queue {
-	int volume;
-	int data[]=new int[5];
+	private int volume;
+	private int data[];
+	static int defaultSize=5;
+	static int queueCount=0;
+
+	//デフォルトコンストラクタ
+	public Queue(){
+		this(defaultSize);
+	}
+
+	public Queue(int queueSize){
+		data=new int[queueSize];
+		System.out.println(data.length+"個分のキュー生成");
+		queueCount++;
+	}
 
 	//データ追加関数
-	void enqueue(int number)
+	public boolean enqueue(int number)
 	{
-		if(data.length > volume)
-		{
-			data[volume] = number;
-			volume++;
-			System.out.println(number + " inserted");
-		}
-		else
-		{
-			System.out.println("over flow!");
+		if(number>0) {
+			if(data.length > volume)
+			{
+				data[volume] = number;
+				volume++;
+				System.out.println(number + " inserted");
+				return true;
+			}
+			else
+			{
+				System.out.println("over flow!");
+				return false;
+			}
+		}else {
+			System.out.println("input value invalid");
+			return false;
 		}
 	}
 
 	//データ取得関数
-	int dequeue()
+	public int dequeue()
 	{
 		int returnValue = 0;
 		if(volume > 0)
@@ -40,7 +60,7 @@ public class Queue {
 	}
 
 	//状態表示関数
-	void printStack()
+	public void printStack()
 	{
 		System.out.print("|");
 		for(int i=0; i < data.length; i++)
@@ -49,5 +69,9 @@ public class Queue {
 			System.out.print("|");
 		}
 		System.out.println("");
+	}
+
+	public static int queueVolume() {
+		return queueCount;
 	}
 }
