@@ -2,8 +2,8 @@
 public class Queue {
 	private int volume;
 	private int data[];
-	static int defaultSize=5;
-	static int queueCount=0;
+	static private int queueCount=0;
+	static private int defaultSize=5;
 
 	//デフォルトコンストラクタ
 	public Queue(){
@@ -33,7 +33,7 @@ public class Queue {
 				return false;
 			}
 		}else {
-			System.out.println("input value invalid");
+			System.out.println("input value invalid(input value:"+number+")");
 			return false;
 		}
 	}
@@ -60,12 +60,35 @@ public class Queue {
 	}
 
 	//状態表示関数
-	public void printStack()
+	public void showData()
 	{
 		System.out.print("|");
 		for(int i=0; i < data.length; i++)
 		{
-			System.out.print(data[i]);
+			showData(i);
+			System.out.print("|");
+		}
+		System.out.println("");
+	}
+
+	public void showData(int i) {
+		System.out.print(data[i]);
+	}
+
+	public void showData(int begin,int end) {
+		if(begin<0||begin>data.length) {
+			System.out.println("begin value invalid");
+			return;
+		}
+		if(end<0||end>data.length||end<begin) {
+			System.out.println("end value invalid");
+			return;
+		}
+
+		System.out.print("|");
+		for(int i=begin; i < end; i++)
+		{
+			showData(i);
 			System.out.print("|");
 		}
 		System.out.println("");
