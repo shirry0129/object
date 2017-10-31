@@ -4,9 +4,9 @@ enum Taste{
 
 
 public class Ramen {
-	private int katasa;//1：固い，2:普通，3:柔い
-    private int ryou;//1-10
-    private Taste soup;
+	protected int katasa;//1：固い，2:普通，3:柔い
+    protected int ryou;//1-10
+    protected Taste soup;
 
     Ramen()
     {
