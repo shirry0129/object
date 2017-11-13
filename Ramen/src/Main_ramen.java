@@ -33,5 +33,38 @@ public class Main_ramen {
 		tanmenNormal.setTopping();
 		tanmenNormal.checkRamen();
 		System.out.println();
+
+		System.out.println("===みそラーメン（唐辛子つき！）===");
+		MisoRamen miso = new MisoRamen();
+		miso.setKatasa(5);
+		miso.setMen(1);
+		miso.setSoup(Taste.みそ);
+		miso.setTopping();
+		miso.checkRamen();
+		miso.setSpice();
+		System.out.println();
+
+		//担々麺
+		System.out.println("===担々麺===");
+		TantanMen tantan = new TantanMen();
+		tantan.setKatasa(5);
+		tantan.setMen(2);
+		tantan.setSoup(Taste.みそ);
+		tantan.setTopping();
+		tantan.setSpice();
+		tantan.setLiquid();
+		tantan.checkRamen();
+		System.out.println('\n');
+
+		System.out.println("===豚骨ラーメン===");
+		TonkotsuRamen tonkotsu=new TonkotsuRamen();
+		tonkotsu.setKatasa(5);
+		tonkotsu.setMen(2);
+		tonkotsu.setSoup(Taste.とんこつ);
+		tonkotsu.setTopping();
+		tonkotsu.setSpice();
+		tonkotsu.setLiquid();
+		tonkotsu.checkRamen();
+		System.out.println('\n');
 	}
 }

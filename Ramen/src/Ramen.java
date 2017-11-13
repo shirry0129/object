@@ -1,7 +1,6 @@
 enum Taste{
-	しょうゆ,みそ,しお
+	しょうゆ,みそ,しお,とんこつ
 }
-
 
 abstract public class Ramen {
 	protected int katasa;//1：固い，2:普通，3:柔い
