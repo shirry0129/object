@@ -12,14 +12,25 @@ public class Main_ramen {
 		misoRamen.checkRamen();
 		System.out.println('\n');
 
+		System.out.println("===コーンバターみそラーメン===");
+		CornbutterMisoRamen cbMisoRamen = new CornbutterMisoRamen();
+		cbMisoRamen.setMen(5);
+		cbMisoRamen.setKatasa(2);
+		cbMisoRamen.setSoup(Taste.しょうゆ);
+		cbMisoRamen.setTopping();
+		cbMisoRamen.checkRamen();
+		System.out.println('\n');
+
 		System.out.println("===普通のチャーシューメン===");
 		ChashuMen chashuMenNormal = new ChashuMen(2,5,Taste.みそ);
 		chashuMenNormal.setChashu(5);
+		chashuMenNormal.setTopping();
 		chashuMenNormal.checkRamen();
 		System.out.println();
 
 		System.out.println("===普通のタンメン===");
 		Tanmen tanmenNormal = new Tanmen(2,5,Taste.みそ,3);
+		tanmenNormal.setTopping();
 		tanmenNormal.checkRamen();
 		System.out.println();
 	}

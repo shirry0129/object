@@ -38,6 +38,6 @@ public class Tanmen extends Ramen {
     }
 
 	public void setTopping() {
-
+		topping="なし";
 	}
 }

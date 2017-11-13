@@ -35,6 +35,6 @@ public class ChashuMen extends Ramen {
     }
 
 	public void setTopping() {
-
+		topping="なし";
 	}
 }
