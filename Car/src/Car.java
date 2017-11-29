@@ -1,13 +1,13 @@
 
 public abstract class Car {
-	private int speed;
-	private int tire;
-	private int door;
-	private int gas;
-	private int mileage;
-	private static int base_speed=100;
-	private static int base_door=5;
-	private static int base_tire=4;
+	protected int speed;
+	protected int tire;
+	protected int door;
+	protected int gas;
+	protected int nenpi;
+	protected static int base_speed=100;
+	protected static int base_door=5;
+	protected static int base_tire=4;
 
 	//デフォルトコンストラクタ
 	Car(){
@@ -43,8 +43,8 @@ public abstract class Car {
 	}
 
 	//燃費の取得
-	public int getMileage() {
-		return mileage;
+	public int getNenpi() {
+		return nenpi;
 	}
 
 	//最高速度の設定
@@ -93,13 +93,14 @@ public abstract class Car {
 	public abstract void setGas();
 
 	//燃費の設定(abstract)
-	public abstract void setMileage();
+	public abstract void setNenpi();
 
+	//運転
 	public void drive() {
 		if(getGas()!=0) {
 			System.out.print("ドドド");
-			if(gas > mileage) {
-				gas -= mileage;
+			if(gas > nenpi) {
+				gas -= nenpi;
 			}else {
 				gas = 0;
 			}
