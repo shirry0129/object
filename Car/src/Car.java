@@ -98,7 +98,7 @@ public abstract class Car {
 	//運転
 	public void drive() {
 		if(getGas()!=0) {
-			System.out.print("ドドド");
+			System.out.println("ドドド");
 			if(gas > nenpi) {
 				gas -= nenpi;
 			}else {

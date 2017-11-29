@@ -10,7 +10,7 @@ public class Truck extends Car{
 		this.nimotsu = nimotsu;
 		if(nimotsu>20) {
 			System.out.println("最大積載量が多すぎます.1tに設定します.");
-			this.nimotsu=10;
+			this.nimotsu=1;
 		}
 		System.out.println("最大積載量:"+this.nimotsu+"[t]");
 	}
@@ -22,11 +22,13 @@ public class Truck extends Car{
 	@Override
 	public void setGas() {
 		gas = 70;
+		System.out.println("積載燃料:"+gas);
 	}
 
 	@Override
 	public void setNenpi() {
 		nenpi = 13;
+		System.out.println("燃費:"+nenpi);
 	}
 
 	@Override

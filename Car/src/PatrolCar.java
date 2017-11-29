@@ -12,11 +12,13 @@ public class PatrolCar extends Car implements Siren {
 	@Override
 	public void setGas() {
 		gas = 71;
+		System.out.println("積載燃料:"+gas);
 	}
 
 	@Override
 	public void setNenpi() {
 		nenpi = 10;
+		System.out.println("燃費:"+nenpi);
 	}
 
 	@Override
