@@ -12,12 +12,12 @@ public class Ambulance extends Car implements Siren {
 	@Override
 	public void setGas() {
 		gas = 70;
-		System.out.println("積載燃料:"+gas);
+		System.out.println("積載燃料:"+getGas());
 	}
 
 	@Override
 	public void setNenpi() {
 		nenpi = 10;
-		System.out.println("燃費:"+nenpi);
+		System.out.println("燃費:"+getNenpi());
 	}
 }

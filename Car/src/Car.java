@@ -11,7 +11,7 @@ public abstract class Car {
 
 	//デフォルトコンストラクタ
 	Car(){
-		this(base_speed,base_door,base_tire);
+		System.out.println("車作成");
 	}
 
 	//コンストラクタ
@@ -51,14 +51,14 @@ public abstract class Car {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 		if(speed>200) {
-			System.out.println("最高速度が速すぎます.150km/hに設定します.");
+			System.out.println("最高速度が速すぎます("+speed+"km/h).150km/hに設定します.");
 			this.speed=150;
 		}
 		if(speed<100) {
-			System.out.println("最高速度が遅すぎます.150km/hに設定します.");
+			System.out.println("最高速度が遅すぎます("+speed+"km/h).150km/hに設定します.");
 			this.speed=150;
 		}
-		System.out.println("最高速度:"+this.speed+"[km/h]");
+		System.out.println("最高速度:"+getSpeed()+"[km/h]");
 	}
 
 	//タイヤの数の設定
@@ -72,7 +72,7 @@ public abstract class Car {
 			System.out.println("タイヤの数が多すぎます.4輪に設定します.");
 			this.tire=4;
 		}
-		System.out.println("タイヤ:"+this.tire+"輪");
+		System.out.println("タイヤ:"+getTire()+"輪");
 	}
 
 	//ドア数の設定
@@ -86,7 +86,7 @@ public abstract class Car {
 			System.out.println("ドアの数が多すぎます.5ドアに設定します.");
 			this.door=4;
 		}
-		System.out.println("ドア数:"+this.door+"ドア");
+		System.out.println("ドア数:"+getDoor()+"ドア");
 	}
 
 	//燃料数の設定(abstract)
@@ -98,8 +98,8 @@ public abstract class Car {
 	//運転
 	public void drive() {
 		if(getGas()!=0) {
-			System.out.println("ドドド");
-			if(gas > nenpi) {
+			System.out.print("ドドド");
+			if(getGas() > getNenpi()) {
 				gas -= nenpi;
 			}else {
 				gas = 0;

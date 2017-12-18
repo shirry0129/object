@@ -8,11 +8,11 @@ public class Truck extends Car{
 
 	public void setNimotsu(int nimotsu) {
 		this.nimotsu = nimotsu;
-		if(nimotsu>20) {
-			System.out.println("最大積載量が多すぎます.1tに設定します.");
+		if(getNimotsu()>20) {
+			System.out.println("最大積載量が多すぎます("+getNimotsu()+"t).1tに設定します.");
 			this.nimotsu=1;
 		}
-		System.out.println("最大積載量:"+this.nimotsu+"[t]");
+		System.out.println("最大積載量:"+getNimotsu()+"[t]");
 	}
 
 	public Truck() {
@@ -22,26 +22,26 @@ public class Truck extends Car{
 	@Override
 	public void setGas() {
 		gas = 70;
-		System.out.println("積載燃料:"+gas);
+		System.out.println("積載燃料:"+getGas());
 	}
 
 	@Override
 	public void setNenpi() {
 		nenpi = 13;
-		System.out.println("燃費:"+nenpi);
+		System.out.println("燃費:"+getNenpi());
 	}
 
 	@Override
 	public void setSpeed(int speed) {
 		this.speed = speed;
-		if(speed>150) {
-			System.out.println("最高速度が速すぎます.120km/hに設定します.");
+		if(getSpeed()>150) {
+			System.out.println("最高速度が速すぎます("+getSpeed()+"km/h).120km/hに設定します.");
 			this.speed=120;
 		}
-		if(speed<80) {
-			System.out.println("最高速度が遅すぎます.120km/hに設定します.");
+		if(getSpeed()<80) {
+			System.out.println("最高速度が遅すぎます("+getSpeed()+"km/h).120km/hに設定します.");
 			this.speed=120;
 		}
-		System.out.println("最高速度:"+this.speed+"[km/h]");
+		System.out.println("最高速度:"+getSpeed()+"[km/h]");
 	}
 }
