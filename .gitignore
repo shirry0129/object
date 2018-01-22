@@ -39,3 +39,6 @@ bin
 *.log
 *.swp
 *.bak
+
+# User add
+*.zip
